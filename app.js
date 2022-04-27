@@ -7,6 +7,8 @@ app.use(express.json());
 const productos = [
   { name: "Producto 1", price: 12.56 },
   { name: "Producto 2", price: 10.99 },
+  { name: "Producto 3", price: 9.99 },
+  { name: "Producto 4", price: 14.99 },
 ];
 
 mongoose.connect(
