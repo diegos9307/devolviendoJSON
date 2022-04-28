@@ -3,9 +3,10 @@ const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
 
-mongoose.connect("mongodb://localhost:27017/products", {
-  useNewUrlParser: true,
-});
+mongoose.connect(
+  process.env.MONGODB_URL || "mongodb://localhost:27017/products",
+  { useNewUrlParser: true }
+);
 
 const ProductSchema = new mongoose.Schema({
   name: String,
